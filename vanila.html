@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <span>clicked : 0</span>
+  <button id="btn">Click me!</button>
+  <script>
+    let count = 0;
+    const span = document.querySelector('span');
+    const button = document.getElementById('btn');
+
+    function buttonClick(){
+      console.log("button now click");
+      count += 1;
+      span.innerText = `clicked : ${count}`;
+    }
+    button.addEventListener("click", buttonClick);
+  </script>
+</body>
+</html>
